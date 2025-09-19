@@ -85,7 +85,7 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/travel-management-system.git
+https://github.com/RaviGauta1121/BookMyPackage.git
 cd travel-management-system
 ```
 
