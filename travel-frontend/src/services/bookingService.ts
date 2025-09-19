@@ -28,11 +28,12 @@ export class BookingService {
   }
 
   static async updateBookingStatus(id: number, status: string): Promise<Booking> {
-    // Fix: Use only 2 arguments - URL and data
-    const response = await apiService.put<Booking>(
-      `/api/bookings/${id}/status`, 
-      { status } // Send as object instead of stringified
-    );
-    return response.data;
-  }
+  const response = await apiService.put<Booking>(
+    `/api/bookings/${id}/status`,
+    `"${status}"` // send as raw JSON string with quotes
+  );
+  return response.data;
+}
+
+
 }
